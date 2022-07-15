@@ -1,3 +1,13 @@
+// here is the list for steps performed in order to cover the required tasks for assignment
+// changing elements style is done many times
+// adding new content to a tag using innerHTML starts on line 46
+// adding  a new nested tag using innerHTML starts on line 64
+// adding a new tag before an existing tag using outerHTMl starts on line 68
+// changing a tag completely using outerHTMl starts on 73
+
+
+
+
 // this line will select the id header in a head section
 let header_change = document.querySelector(`#header`);
 // following lines will put the border around header id and padding of 20px inside the header box and a margin of 10px
@@ -14,7 +24,20 @@ main_content_change[`style`][`border`] = `2px solid blue`;
 main_content_change[`style`][`padding`] = `10px`;
 main_content_change[`style`][`margin`] = `10px`;
 
+// below line will grab the author id 
+let author_id = document.getElementById(`author`);
+// below lines will change some styles of author id
+author_id[`style`][`border`] = `2px solid green`;
+author_id[`style`][`padding`] = `20px`;
+author_id[`style`][`margin`] = `10px`;
 
+
+// below line will grab the footer id
+let footer_id = document.querySelector(`#footer`);
+// below lines will change some style of footer id 
+footer_id[`style`][`border`] = `2px solid black`;
+footer_id[`style`][`padding`] = `20px`;
+footer_id[`style`][`margin`] = `10px`;
 
 // the below line will help selecting the class of heading in all sections i.e head main and footer
 let heading_change = document.querySelectorAll(`.heading`);
@@ -26,22 +49,10 @@ while(count < heading_change.length){
     heading_change[count][`style`][`fontSize`] = `1.5rem`;
     count++;
 }
-// below line will grab the author id 
-let author_id = document.getElementById(`author`);
-// below lines will change some styles of author id
-author_id[`style`][`border`] = `2px solid green`;
-author_id[`style`][`padding`] = `20px`;
-author_id[`style`][`margin`] = `10px`;
+
 // this step will add content to the existing tag using innerHTML
 author_id[`innerHTML`] = author_id[`innerHTML`] + ` and also has a github account `;
 
-
-// below line will grab the footer id
-let footer_id = document.querySelector(`#footer`);
-// below lines will change some style of footer id 
-footer_id[`style`][`border`] = `2px solid black`;
-footer_id[`style`][`padding`] = `20px`;
-footer_id[`style`][`margin`] = `10px`;
 
 // get elements by class name will target  class of highlight id 
 let class_highlight_id = document.getElementsByClassName(`highlight_id`);
@@ -59,5 +70,6 @@ let footer_heading_id = document.querySelector(`#footer_heading`);
 footer_heading_id[`outerHTML`] = `<a href="https://facebook.com">Facebook</a>` + 
 ` <a href="https://youtube.com">Youtube</a>` + footer_heading_id[`outerHTML`];
 
+// this step is for changing a tag completely using outerhtml
 let info_id = document.getElementById(`information_about_author`);
 info_id[`outerHTML`] = `<p>No information about the author is available</p>`;
