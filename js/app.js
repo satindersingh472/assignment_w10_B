@@ -1,9 +1,10 @@
 // here is the list for steps performed in order to cover the required tasks for assignment
+// every step is covered in an order if the debuggers is started from top it will go each and every step showing differences
 // changing elements style is done many times
-// adding new content to a tag using innerHTML starts on line 46
-// adding  a new nested tag using innerHTML starts on line 64
-// adding a new tag before an existing tag using outerHTMl starts on line 68
-// changing a tag completely using outerHTMl starts on 73
+// adding new content to a tag using innerHTML starts on line 62
+// adding  a new nested tag using innerHTML starts on line 65
+// adding a new tag before an existing tag using outerHTMl starts on line 69
+// changing a tag completely using outerHTMl starts on 74
 
 
 
@@ -49,11 +50,6 @@ while(count < heading_change.length){
     heading_change[count][`style`][`fontSize`] = `1.5rem`;
     count++;
 }
-
-// this step will add content to the existing tag using innerHTML
-author_id[`innerHTML`] = author_id[`innerHTML`] + ` and also has a github account `;
-
-
 // get elements by class name will target  class of highlight id 
 let class_highlight_id = document.getElementsByClassName(`highlight_id`);
 let count_id = 0;
@@ -61,6 +57,10 @@ for (count_id=0; count_id < class_highlight_id.length; count_id++){
     // all highlight class will have red color fonts
 class_highlight_id[count_id][`style`][`color`] = `red`;
 }
+
+// this step will add content to the existing tag using innerHTML
+author_id[`innerHTML`] = author_id[`innerHTML`] + ` and also has a github account `;
+
 // this is step to add nested tag inside another tag using innerHTML
 let github_link_id = document.getElementById(`github_link`);
 github_link_id[`innerHTML`] = `<a href="https://github.com/satindersingh472">Click Here for </a>` + github_link_id[`innerHTML`];
